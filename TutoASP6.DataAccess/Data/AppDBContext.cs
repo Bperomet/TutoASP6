@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.EntityFrameworkCore;
 using TutoASP6.Models;
 
-namespace TutoASP6.Data
+namespace TutoASP6.DataAccess.Data
 {
     public class AppDBContext : DbContext
     {
@@ -11,6 +12,9 @@ namespace TutoASP6.Data
         }
 
         public DbSet<Category> categories { get; set; }
+        public DbSet<CoverType> coverTypes { get; set; }
+        public DbSet<Product> products { get; set; }
+
 
     }
 }
